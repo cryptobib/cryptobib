@@ -34,7 +34,7 @@ Just run in some folder:
 
 or
 
-    mr bootstrap https://raw.githubusercontent.com/cryptobib/cryptobib/master/mrconfig/mrconfig_ssl
+    mr bootstrap https://raw.githubusercontent.com/cryptobib/cryptobib/master/mrconfig/mrconfig_ssh
 
 depending whether you want to access github using *https* or *ssl*.
 
