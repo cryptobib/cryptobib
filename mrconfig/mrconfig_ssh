@@ -1,0 +1,26 @@
+[.]
+checkout = git clone "git@github.com:cryptobib/cryptobib" .
+
+[db]
+checkout = git clone "git@github.com:cryptobib/db" db
+
+[db_import]
+checkout = git clone "git@github.com:cryptobib/db_import" db_import
+
+[db_test]
+checkout = git clone "git@github.com:cryptobib/db_test" db_test
+
+[db_tools]
+checkout = git clone "git@github.com:cryptobib/db_tools" db_tools
+
+[export]
+checkout = git clone "git@github.com:cryptobib/export" export
+
+[export_crossref]
+checkout = git clone "git@github.com:cryptobib/export_crossref" export_crossref
+
+[lib]
+checkout = git clone "git@github.com:cryptobib/lib" lib
+
+[webapp]
+checkout = git clone "git@github.com:cryptobib/webapp" webapp
