@@ -6,25 +6,10 @@
 
 ### Requirements
 
-#### General
-
 - MyRepos [mr](https://raw.githubusercontent.com/joeyh/myrepos/master/mr) in your path
 - python 2.7 with the following packages (which can be installed using `pip`):
   - pybtex 0.16 (WARNING: not another version, because with use internal structure of pybtex 0.16)
   - unidecode
-
-#### Tests (db_test)
-
-- compile bibtex8:
-
-		cd db_test/bibtex8
-		make -f unix.mak linux-gcc
-
-- scons (can be installed via `pip install --egg scons`)
-- compile pplatex
-
-		cd db_test/pplatex
-		scons
 
 ### Checkout the project
 

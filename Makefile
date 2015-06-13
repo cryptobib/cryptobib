@@ -27,3 +27,6 @@ db/crypto.bib db/crypto_crossref.bib: db/abbrev0.bib db/crypto_db.bib db/crypto_
 clean: 
 	rm -f $(ABBREV_BIB)
 	rm -f db/crypto.bib db/crypto_crossref.bib 
+
+web: all
+	$(PYTHON) db_tools/update_webapp_db.py
