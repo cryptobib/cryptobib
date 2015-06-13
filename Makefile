@@ -28,5 +28,8 @@ clean:
 	rm -f $(ABBREV_BIB)
 	rm -f db/crypto.bib db/crypto_crossref.bib 
 
-web: all
+web: all webapp/static/files/crypto.zip
 	$(PYTHON) db_tools/update_webapp_db.py
+
+webapp/static/files/crypto.zip: db/crypto.bib db/crypto_crossref.bib ${ABBREV_BIB}
+	zip -j webapp/static/files/crypto.zip $^
