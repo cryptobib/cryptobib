@@ -2,6 +2,8 @@
 
 **WARNING**: This is probably not the repository your are interested in. This repository is only for *cryptobib* developers. The repositories containing the public *bib* files are [cryptobib/export](https://github.com/cryptobib/export) and  [cryptobib/export_crossref](https://github.com/cryptobib/export_crossref).
 
+For any **correction** or **issue** with the database content, you can either contact Michel Abdalla and Fabrice Benhamouda (firstname.lastname@ens.fr), or submit a pull request or report an issue for [cryptobib/db](https://github.com/cryptobib/db).
+
 ## Getting started
 
 ### Requirements
