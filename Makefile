@@ -12,7 +12,7 @@ all: ${ABBREV_BIB} db/crypto.bib db/crypto_crossref.bib db/changes.txt export/cr
 export/crypto.bib: db/crypto.bib
 	cp db/crypto.bib export
 
-export_crossref/crypto.bib: db/crypto_crossref.bib
+export_crossref/crypto_crossref.bib: db/crypto_crossref.bib
 	cp db/crypto_crossref.bib export_crossref
 
 test: all
