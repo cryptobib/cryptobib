@@ -33,7 +33,7 @@ depending whether you want to access github using *https* or *ssl*.
 4. go back in `..`
 5. update `db/abbrev.bibyml` and run `python2 db_tools/gen_abbrev.py`
 6. update `db/crypto_conf_list.bib`
-7. add this bibtex file to `db/crypto_db.bib` by running `python2 db_tools/add.py import/confYYYY.bib`
+7. add this bibtex file to `db/crypto_db.bib` by running `python2 db_tools/add.py db_import/confYYYY.bib`
 8. update `db/changes.txt`
 9. generate all the files: `make`
 10. check all was done correctly: `make test`
