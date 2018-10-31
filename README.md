@@ -8,10 +8,29 @@ For any **correction** or **issue** with the database content, you can either co
 
 ### Requirements
 
-- MyRepos [mr](https://raw.githubusercontent.com/joeyh/myrepos/master/mr) in your path
-- python 2.7 with the following packages (which can be installed using `pip`):
-  - pybtex 0.16 (WARNING: not another version, because with use internal structure of pybtex 0.16)
+- MyRepos [mr](https://raw.githubusercontent.com/joeyh/myrepos/master/mr) in your path (on MacOS X with HomeBrew: `brew install mr`)
+- python 2.7 with the following packages (which can be installed using `pip` - on MacOS X with HomeBrew, `pip` can be installed with `brew install python`):
+  - pybtex 0.16-0.20.1 
+    WARNING: we use the internal structure of pybtex. 
+    CryptoBib has only been tested with pybtex 0.16-0.20.1.
+    There might be bugs with other versions but they should be easy to spot
+    (like an abnormal exception).
+    If you do not want or cannot install an outdated version of pybtex globally, please read the section about virtual_env below
   - unidecode
+- on MacOS X, XCode Command Line Tools is required: `xcode-select --install`. We also recommend to use HomeBrew.
+  
+#### Using virtualenv
+
+If you want to separate the Python installation for CryptoBib from your global installation, you can use virtualenv.
+
+Run (somewhere not necessarily in the cryptobib folder):
+
+    pip install virtualenv
+    virtualenv venv
+    . venv/bin/activate
+    pip install pybtex==0.20.1 unidecode
+    
+Each time you need to run any CryptoBib script, you need to first activate the virtualenv `. venv/bin/activate`. This will replace the global Python installation by the local one in `venv`. You can go back to the global one using `deactivate`.
 
 ### Checkout the project
 
@@ -24,6 +43,10 @@ or
     mr bootstrap https://raw.githubusercontent.com/cryptobib/cryptobib/master/mrconfig/mrconfig_ssh
 
 depending whether you want to access github using *https* or *ssl*.
+
+### Set up `make test`
+
+If you want to be able to run `make test` (highly recommended before any push), you first need to read `db_test/README.md`.
 
 ### Import a new conference
 
