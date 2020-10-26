@@ -1,4 +1,4 @@
-PYTHON=python2
+PYTHON=python3
 ABBREV_BIB=db/abbrev0.bib db/abbrev1.bib db/abbrev2.bib db/abbrev3.bib
 EXPORT_DIRS=export export_crossref
 

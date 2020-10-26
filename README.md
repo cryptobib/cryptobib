@@ -9,7 +9,7 @@ For any **correction** or **issue** with the database content, you can either co
 ### Requirements
 
 - MyRepos [mr](https://raw.githubusercontent.com/joeyh/myrepos/master/mr) in your path (on MacOS X with HomeBrew: `brew install mr`)
-- python 2.7 with the following packages (which can be installed using `pip` - on MacOS X with HomeBrew, `pip` can be installed with `brew install python`):
+- python 3.6 with the following packages (which can be installed using `pip` - on MacOS X with HomeBrew, `pip` can be installed with `brew install python`):
   - pybtex 0.16-0.20.1 
     WARNING: we use the internal structure of pybtex. 
     CryptoBib has only been tested with pybtex 0.16-0.20.1.
