@@ -53,12 +53,12 @@ If you want to be able to run `make test` (highly recommended before any push), 
 ### Import a new conference
 
 1. go to `db_import`
-2. run `python2 import.py confYYYY` with *conf* the conf key and *YYYY* the year
+2. run `python3 import.py confYYYY` with *conf* the conf key and *YYYY* the year
 3. correct the bibtex file `confYYYY.bib`
 4. go back in `..`
-5. update `db/abbrev.bibyml` and run `python2 db_tools/gen_abbrev.py`
+5. update `db/abbrev.bibyml` and run `python3 db_tools/gen_abbrev.py`
 6. update `db/crypto_conf_list.bib`
-7. add this bibtex file to `db/crypto_db.bib` by running `python2 db_tools/add.py db_import/confYYYY.bib`
+7. add this bibtex file to `db/crypto_db.bib` by running `python3 db_tools/add.py db_import/confYYYY.bib`
 8. update `db/changes.txt`
 9. generate all the files: `make`
 10. check all was done correctly: `make test`
