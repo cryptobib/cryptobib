@@ -10,15 +10,15 @@ For any **correction** or **issue** with the database content, you can either co
 
 - MyRepos [mr](https://raw.githubusercontent.com/joeyh/myrepos/master/mr) in your path (on MacOS X with HomeBrew: `brew install mr`)
 - python 3.6 with the following packages (which can be installed using `pip` - on MacOS X with HomeBrew, `pip` can be installed with `brew install python` - on Ubuntu `sudo apt install python3-pip`):
-  - pybtex 0.16-0.20.1 
+  - pybtex 0.16-0.24 
     WARNING: we use the internal structure of pybtex. 
-    CryptoBib has only been tested with pybtex 0.16-0.20.1.
+    CryptoBib has only been tested with pybtex 0.16-0.24.
     There might be bugs with other versions but they should be easy to spot
     (like an abnormal exception).
     If you do not want or cannot install an outdated version of pybtex globally, please read the section about virtual_env below
-    `pip3 install pybtex==0.20.1`
+    `pip3 install pybtex==0.24`
   - unidecode
-  On Ubuntu, to install globally: `sudo -H pip3 install pybtex==0.20.1 unidecode`
+  On Ubuntu, to install globally: `sudo -H pip3 install pybtex==0.24 unidecode`
 - on MacOS X, XCode Command Line Tools is required: `xcode-select --install`. We also recommend to use HomeBrew.
   
 #### Using virtualenv
@@ -30,7 +30,7 @@ Run (somewhere not necessarily in the cryptobib folder):
     pip install virtualenv
     virtualenv venv
     . venv/bin/activate
-    pip install pybtex==0.20.1 unidecode
+    pip install pybtex==0.24 unidecode
     
 Each time you need to run any CryptoBib script, you need to first activate the virtualenv `. venv/bin/activate`. This will replace the global Python installation by the local one in `venv`. You can go back to the global one using `deactivate`.
 
