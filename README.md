@@ -72,6 +72,47 @@ Then run
     mr record -m "message... generally the same as in changes.txt"
     mr push
 
+
+### Troubleshooting
+
+#### `KeyError: EntryKey(...)` when running `gen.py`
+
+If `gen.py` outputs the following error:
+```plain
+python3 db_tools/gen.py
+Traceback (most recent call last):
+  File "[...]/db_tools/gen.py", line 68, in <module>
+    main()
+  File "[...]/db_tools/gen.py", line 63, in main
+    gen_crypto_bib(db, confs_years, True)
+  File "[...]/db_tools/gen.py", line 41, in gen_crypto_bib
+    mybibtex.generator.bibtex_gen(out, db, expand_crossrefs=expand_crossrefs,
+  File "[...]/db_tools/../lib/mybibtex/generator.py", line 252, in bibtex_gen
+    bibtex_write_entries(
+  File "[...]/db_tools/../lib/mybibtex/generator.py", line 236, in bibtex_write_entries
+    bibtex_write_entry(out, db, key, entry, *args, **kwargs)
+  File "[...]/db_tools/../lib/mybibtex/generator.py", line 207, in bibtex_write_entry
+    fields = bibtex_entry_format_fields(db, key, entry, expand_crossrefs, expand_values)
+  File "[...]/db_tools/../lib/mybibtex/generator.py", line 185, in bibtex_entry_format_fields
+    crossref_fields = db.entries[EntryKey.from_string(fields["crossref"].expand())].fields.copy()
+KeyError: EntryKey(C24-10)
+make: *** [db/crypto.bib] Error 1
+```
+it means that the cross-referenced entry `C24-10` is missing.
+It most likely means that `db/crypto_conf_list.bib` needs to be updated.
+
+#### `KeyError: '...'` when running `add.py`
+
+If `add.py` outputs the following error:
+```plain
+Traceback (most recent call last):
+  File "[...]/db_tools/../lib/mybibtex/parser.py", line 261, in substitute_macro
+    return self.macros[name.lower()]
+KeyError: 'crypto24-10'`
+```
+it means that the macro `crypto24-10` was not defined properly.
+It most likely means that `db/abbrev.bibyml` needs to be updated and/or `python3 db_tools/gen_abbrev.py` needs to be run.
+
 ## Organization of the project
 
 The project is composed of multiple repositories:
