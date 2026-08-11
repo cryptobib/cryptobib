@@ -52,6 +52,13 @@ If you want to be able to run `make test` (highly recommended before any push), 
 
 ### Import a new conference
 
+`import.py` looks up DBLP publications in a local copy of the [DBLP XML dump](https://dblp.org/faq/How+can+I+download+the+whole+dblp+dataset.html) instead of fetching each one over the network (DBLP is frequently overloaded and this used to get the import script rate-limited/blocked). Before your first import, fetch it with:
+
+    cd db_import
+    python3 fetch_dblp_dump.py
+
+This downloads `dblp.xml.gz` + `dblp.dtd` into `db_import/dblp-dump/` (skipping the download if the local copy's checksum already matches). Re-run it occasionally to pick up new publications; entries not yet in the dump fall back to a live DBLP fetch automatically.
+
 1. go to `db_import`
 2. run `python3 import.py confYYYY` with *conf* the conf key and *YYYY* the year
 3. correct the bibtex file `confYYYY.bib`
